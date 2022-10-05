@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class sagdollController : MonoBehaviour
     [Header("esto esta apagado cuando hay animacion")]
     public List<Rigidbody> rigidbodies;
     public List<Collider> colliders;
+
+    public event Action GotHitEvent;
 
     void Start()
     {
@@ -39,16 +42,6 @@ public class sagdollController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Toggle();
-         //   mainCollider.enabled = false;
-        }
-
-    }
     bool value = true;
     public void Toggle()
     {
@@ -72,13 +65,9 @@ public class sagdollController : MonoBehaviour
         mainRigidbody.isKinematic = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void GotHit()
     {
-        if(collision.transform.tag == "Hit")
-        {
-            value = true;
-            Toggle();
-        }
+        GotHitEvent?.Invoke();
     }
    
 }
