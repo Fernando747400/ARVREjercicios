@@ -11231,5 +11231,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d38c2535f6eb48af2ddb51c1deb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeadMap:
+    VRTarget: {fileID: 0}
+    RigTarget: {fileID: 1039536656}
+    TrackingPositionOffset: {x: 0, y: 0, z: 0}
+    TrackingRotationOffset: {x: 0, y: 0, z: 0}
+  LeftHandMap:
+    VRTarget: {fileID: 0}
+    RigTarget: {fileID: 1910653884}
+    TrackingPositionOffset: {x: 0, y: 0, z: 0}
+    TrackingRotationOffset: {x: 0, y: 0, z: 0}
+  RightHandMap:
+    VRTarget: {fileID: 0}
+    RigTarget: {fileID: 493080980}
+    TrackingPositionOffset: {x: 0, y: 0, z: 0}
+    TrackingRotationOffset: {x: 0, y: 0, z: 0}
   HeadConstrain: {fileID: 1039536656}
   HeadOffsetBody: {x: 0, y: 0, z: 0}
