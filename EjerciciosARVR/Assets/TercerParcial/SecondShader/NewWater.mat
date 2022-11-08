@@ -74,7 +74,7 @@ Material:
     - _Smoothness: 0.63
     - _SrcBlend: 5
     - _Surface: 1
-    - _WaveFrequency: 0.01
+    - _WaveFrequency: 0.001
     - _WaveHeight: 5
     - _WaveSpeed: 0.02
     - _WorkflowMode: 1
