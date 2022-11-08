@@ -50,6 +50,7 @@ public class CannonBall : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            Destroy(other.gameObject.GetComponent<BouyancyComplex>());
             ResetValues();
             Cannon.Instance.canonBallPool.RecicleObject(Cannon.Instance.projectile, this.gameObject);
         }
