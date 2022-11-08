@@ -48,6 +48,8 @@ public class Cannon : MonoBehaviour
         {
             RotateCannon();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space)) FireCannon();
     }
 
     private void RotateCannon()
