@@ -278,6 +278,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "LeftTurn",
+                    "type": "Button",
+                    "id": "f7ff30a9-f964-456e-b69e-9537a383beee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ForwardLeft",
+                    "type": "Button",
+                    "id": "e67f12c1-b0bf-4ef5-80c8-2c8fcbe5cf1c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -377,6 +395,28 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Translate Anchor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "433cb93e-66fc-4b27-b3e6-51c2c59daaa9",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftTurn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "98069c29-a90b-45d3-9de6-9f24be6cedea",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ForwardLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -719,6 +759,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "RightTurn",
+                    "type": "Button",
+                    "id": "9676ae33-090e-48a5-a0e4-d38de747731d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ForwardRight",
+                    "type": "Button",
+                    "id": "c69a2030-4d62-4bb0-961a-851345e33da1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "8f73d114-ba29-4e8d-9c38-b3da08c8969e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Drop",
+                    "type": "Button",
+                    "id": "5894f7ee-41ee-4ca5-8cf7-0ac0aa206b3b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -807,6 +883,50 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Translate Anchor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f149c2a2-1d6b-427a-a630-5bc05e7d606d",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightTurn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "936b07f2-35e6-491e-8e92-de7340ecec41",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ForwardRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "66d8e34e-6157-4e48-ac66-8de4cc591bbd",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "55e30dcd-d3d7-4bf1-bb84-5870e381030f",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

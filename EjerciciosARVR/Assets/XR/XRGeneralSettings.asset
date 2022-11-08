@@ -17,7 +17,66 @@ MonoBehaviour:
   m_AutomaticRunning: 0
   m_Loaders:
   - {fileID: 11400000, guid: 01caefb8b1936064fbff1d3cc1f0b342, type: 2}
-  - {fileID: 11400000, guid: 4d15eb51fbae42645b341b134339dd8f, type: 2}
+--- !u!114 &-8424599573535055858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: WSA Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders: []
+--- !u!114 &-6792287395458119715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: WSA Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -8424599573535055858}
+  m_InitManagerOnStart: 1
+--- !u!114 &-6791264823911897313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: WebGL Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders: []
+--- !u!114 &-1640810255378764080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: WebGL Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -6791264823911897313}
+  m_InitManagerOnStart: 1
 --- !u!114 &-171357351620097074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,10 +106,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dc886499c26824283350fa532d087d, type: 3}
   m_Name: XRGeneralSettings
   m_EditorClassIdentifier: 
-  Keys: 0100000007000000
+  Keys: 0100000007000000040000000d0000000e000000
   Values:
   - {fileID: 3188693394597875983}
   - {fileID: 3051490024507498667}
+  - {fileID: 6246110359605227427}
+  - {fileID: -1640810255378764080}
+  - {fileID: -6792287395458119715}
+--- !u!114 &26222599756159561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: iPhone Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders: []
 --- !u!114 &3051490024507498667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,4 +156,18 @@ MonoBehaviour:
   m_Name: Standalone Settings
   m_EditorClassIdentifier: 
   m_LoaderManagerInstance: {fileID: -8586296354391736541}
+  m_InitManagerOnStart: 1
+--- !u!114 &6246110359605227427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: iPhone Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: 26222599756159561}
   m_InitManagerOnStart: 1

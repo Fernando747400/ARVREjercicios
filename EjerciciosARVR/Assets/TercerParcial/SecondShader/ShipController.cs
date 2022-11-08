@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ShipController : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class ShipController : MonoBehaviour
     [SerializeField] private float _rudderForce;
 
     [SerializeField] private GameObject _rudderWheel;
+
+    [SerializeField] private InputActionReference _moveForward;
+    [SerializeField] private InputActionReference _moveForwardTwo;
+    [SerializeField] private InputActionReference _moveLeft;
+    [SerializeField] private InputActionReference _moveRight;
 
     public enum Heading
     {
@@ -29,6 +35,10 @@ public class ShipController : MonoBehaviour
     private void Start()
     {
         _rigidBody = this.gameObject.GetComponent<Rigidbody>();
+        _moveForward.action.performed += ctx => MoveForward();
+        _moveForwardTwo.action.performed += ctx => MoveForward();
+        _moveLeft.action.performed += ctx => MoveLeft();
+        _moveRight.action.performed += ctx => MoveRight();
     }
     private void Update()
     {
@@ -65,26 +75,33 @@ public class ShipController : MonoBehaviour
     {
         if (_rudderWheel == null) return;
 
-        if (Input.GetKeyDown(KeyCode.A)) 
-        {
-            HeadingState = Heading.Left;
-            RotateWheel(new Vector3(0,0,45));
-        }
+        if (Input.GetKeyDown(KeyCode.A)) MoveLeft(); 
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            HeadingState = Heading.Right;
-            RotateWheel(new Vector3(0, 0, -45));
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            HeadingState = Heading.Forward;
-            RotateWheel(Vector3.zero);
-        }
+        if (Input.GetKeyDown(KeyCode.D)) MoveRight();
+
+        if (Input.GetKeyDown(KeyCode.W)) MoveForward();
     }
 
     private void RotateWheel(Vector3 degrees)
     {
         iTween.RotateTo(_rudderWheel, iTween.Hash("rotation", degrees, "islocal", true, "time", 4f));
+    }
+
+    private void MoveForward()
+    {
+        HeadingState = Heading.Forward;
+        RotateWheel(Vector3.zero);
+    }
+
+    private void MoveLeft()
+    {
+        HeadingState = Heading.Left;
+        RotateWheel(new Vector3(0, 0, 45));
+    }
+
+    private void MoveRight()
+    {
+        HeadingState = Heading.Right;
+        RotateWheel(new Vector3(0, 0, -45));
     }
 }

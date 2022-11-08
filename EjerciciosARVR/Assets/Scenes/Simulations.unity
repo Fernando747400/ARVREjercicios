@@ -2509,10 +2509,14 @@ MonoBehaviour:
   - {fileID: 2125131723}
   - {fileID: 967303219}
   - {fileID: 1728639116}
-  _windForce: 300
+  _windForce: 200
   _rudder: {fileID: 835544994}
   _rudderForce: 15
   _rudderWheel: {fileID: 0}
+  _moveForward: {fileID: 0}
+  _moveForwardTwo: {fileID: 0}
+  _moveLeft: {fileID: 0}
+  _moveRight: {fileID: 0}
   HeadingState: 2
 --- !u!54 &154241876
 Rigidbody:
@@ -4117,10 +4121,14 @@ MonoBehaviour:
   - {fileID: 1175566329}
   - {fileID: 957206034}
   - {fileID: 1283102810}
-  _windForce: 300
+  _windForce: 200
   _rudder: {fileID: 208065000}
   _rudderForce: 15
   _rudderWheel: {fileID: 0}
+  _moveForward: {fileID: 0}
+  _moveForwardTwo: {fileID: 0}
+  _moveLeft: {fileID: 0}
+  _moveRight: {fileID: 0}
   HeadingState: 1
 --- !u!54 &266806842
 Rigidbody:
@@ -5234,10 +5242,14 @@ MonoBehaviour:
   - {fileID: 1060930330}
   - {fileID: 438524789}
   - {fileID: 89441206}
-  _windForce: 300
+  _windForce: 200
   _rudder: {fileID: 672153080}
   _rudderForce: 15
   _rudderWheel: {fileID: 0}
+  _moveForward: {fileID: 0}
+  _moveForwardTwo: {fileID: 0}
+  _moveLeft: {fileID: 0}
+  _moveRight: {fileID: 0}
   HeadingState: 1
 --- !u!54 &307933713
 Rigidbody:
@@ -7816,6 +7828,10 @@ PrefabInstance:
     - target: {fileID: 8310610895244205290, guid: 534f038ed0f19db4496e791e28e5994b, type: 3}
       propertyPath: m_Name
       value: cannon_left (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310610895244205290, guid: 534f038ed0f19db4496e791e28e5994b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8310610895246393897, guid: 534f038ed0f19db4496e791e28e5994b, type: 3}
       propertyPath: canonBallPool
@@ -15172,10 +15188,14 @@ MonoBehaviour:
   - {fileID: 983694743}
   - {fileID: 1070567998}
   - {fileID: 1904013593}
-  _windForce: 300
+  _windForce: 200
   _rudder: {fileID: 753078002}
   _rudderForce: 15
   _rudderWheel: {fileID: 0}
+  _moveForward: {fileID: 0}
+  _moveForwardTwo: {fileID: 0}
+  _moveLeft: {fileID: 0}
+  _moveRight: {fileID: 0}
   HeadingState: 2
 --- !u!54 &910767448
 Rigidbody:
@@ -21066,6 +21086,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 14.351
       objectReference: {fileID: 0}
+    - target: {fileID: 8310610894061701897, guid: 534f038ed0f19db4496e791e28e5994b, type: 3}
+      propertyPath: handController
+      value: 
+      objectReference: {fileID: 2909265109116572734}
+    - target: {fileID: 8310610894061701897, guid: 534f038ed0f19db4496e791e28e5994b, type: 3}
+      propertyPath: inputActionDrop
+      value: 
+      objectReference: {fileID: 2297483054713042240, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 8310610894061701897, guid: 534f038ed0f19db4496e791e28e5994b, type: 3}
+      propertyPath: inputActionGrab
+      value: 
+      objectReference: {fileID: -7528181154534862663, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 8310610895243968712, guid: 534f038ed0f19db4496e791e28e5994b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000000085149324
@@ -21281,6 +21313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385187236}
   - component: {fileID: 1385187235}
+  - component: {fileID: 1385187237}
   m_Layer: 0
   m_Name: XR Interaction Manager
   m_TagString: Untagged
@@ -21315,6 +21348,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1385187237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385187234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017c5e3933235514c9520e1dace2a4b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ActionAssets:
+  - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &1387714459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40108,15 +40155,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2909265108423531258}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.03, y: -0.63000107, z: -9.74}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: 2.58, y: -5.37, z: 4.74}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2909265108114189674}
   m_Father: {fileID: 3811391886370354852}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2909265108423531258
 GameObject:
   m_ObjectHideFlags: 0
@@ -42183,7 +42230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4588913030302624798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 16.94, z: 0}
+  m_LocalPosition: {x: 0, y: 59.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42545,6 +42592,10 @@ MonoBehaviour:
   _rudder: {fileID: 2074382092}
   _rudderForce: 15
   _rudderWheel: {fileID: 5470509801127739908}
+  _moveForward: {fileID: 6386939829761635274, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _moveForwardTwo: {fileID: 8322005212576336945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _moveLeft: {fileID: 7654289540932147197, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _moveRight: {fileID: 5735071245940578384, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   HeadingState: 0
 --- !u!1 &4613196333079779705
 GameObject:

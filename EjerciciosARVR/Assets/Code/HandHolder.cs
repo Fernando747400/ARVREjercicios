@@ -1,28 +1,36 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 public class HandHolder : XRBaseInteractable
 {
     [Header("Hand Holder")]
     [SerializeField] HandController_xR handController;
+    [SerializeField] private InputActionReference inputActionGrab;
+    [SerializeField] private InputActionReference inputActionDrop;
+
     public Action<bool> OnGrabbed;
     private bool _isGrabbing;
     public bool IsGrabbing => _isGrabbing;
 
+    private void Start()
+    {
+        inputActionGrab.action.performed += ctx => Grab();
+        inputActionDrop.action.performed += ctx => Drop();
+    }
+
     protected override void Awake()
     {
         base.Awake();
-        onSelectEntered.AddListener(Grab);
-        onSelectExited.AddListener(Drop);
     }
-    protected virtual void Grab(XRBaseInteractor interactor)
+    protected virtual void Grab()
     {
         _isGrabbing = true;
         OnGrabbed?.Invoke(_isGrabbing);
         handController.HandleHandsVisible(false);
     }
 
-    protected virtual void Drop(XRBaseInteractor interactor)
+    protected virtual void Drop()
     {
         _isGrabbing = false;
         OnGrabbed?.Invoke(_isGrabbing);
