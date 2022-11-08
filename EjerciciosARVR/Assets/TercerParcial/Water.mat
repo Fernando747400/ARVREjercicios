@@ -13,6 +13,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
+--- !u!114 &-958942237245670497
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -27,12 +40,21 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _FoamTexture:
+        m_Texture: {fileID: 2800000, guid: 00563575973918544967f227dd137124, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normals:
+        m_Texture: {fileID: 2800000, guid: 570f01bf57b9e8a4ca49b8973412fd9e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -47,7 +69,44 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _Blend: 0
+    - _CastShadows: 1
+    - _Cull: 2
+    - _Depth: -5
+    - _DstBlend: 0
+    - _FoamDistance: -5
+    - _FoamStrength: 0.15
+    - _FoamTiling: 5
+    - _Normal_Speed: 40
+    - _Normal_Strengh: 0.15
+    - _Normal_TIle: 0.01
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    - _ReceiveShadows: 1
+    - _SmoothNess: 0.8
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _WaveScale: 1.5
+    - _WaveSpeed: 20
+    - _WaveStrenght: 2
+    - _WaveTile: 1
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _ZWriteControl: 0
+    m_Colors:
+    - _DepthClamp: {r: 0, g: 0.5, b: 0, a: 0}
+    - _DepthColor: {r: 0, g: 0, b: 0, a: 0}
+    - _FoamClamp: {r: 0, g: 0.5, b: 0, a: 0}
+    - _WaterDirection: {r: -1, g: 0, b: 0, a: 0}
+    - _Water_A: {r: 0, g: 0.5790384, b: 1, a: 0}
+    - _Water_B: {r: 0.102794595, g: 0.27310005, b: 0.3962264, a: 0}
+    - _Water_Color_A: {r: 0, g: 0.6645422, b: 1, a: 0}
+    - _Water_Color_B: {r: 0.08410466, g: 0.2296207, b: 0.509434, a: 0}
+    - _WaveColorClamp: {r: 0.3, g: 1, b: 0, a: 0}
+    - _WaveDirection: {r: -1, g: 0, b: 0, a: 0}
+    - _WaveMap: {r: 0.04, g: 0.3, b: 0, a: 0}
   m_BuildTextureStacks: []
