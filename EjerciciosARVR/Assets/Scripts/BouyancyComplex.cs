@@ -69,9 +69,4 @@ public class BouyancyComplex : MonoBehaviour
         }
 
     }
-
-    private void GetWaveManager()
-    {
-        
-    }
 }
