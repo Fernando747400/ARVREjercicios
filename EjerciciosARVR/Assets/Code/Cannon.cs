@@ -14,6 +14,8 @@ public class Cannon : MonoBehaviour
     [SerializeField] private bool _isGrabbingHolders = false;
     [SerializeField] private int maxProjectiles;
     [SerializeField] private float launchForce;
+
+    public AudioClip FireCannonSound;
     public GameObject projectile;
     public GameObject CannonExit;
 
@@ -78,6 +80,8 @@ public class Cannon : MonoBehaviour
         GameObject canonball = canonBallPool.GetObject(projectile);
         CannonBall canon = canonball.GetComponent<CannonBall>();
         canon.Fire(CannonExit.transform.position, CannonExit.transform.forward, launchForce);
+
+        if (FireCannonSound != null) AudioSource.PlayClipAtPoint(FireCannonSound, CannonExit.transform.position, 0.5f);
     }
 
 }
