@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BouyancyComplex : MonoBehaviour
 {
+    public VertexManager _vertexManager;
+
     public Transform[] floaters;
 
     int floatersUnderwater;
@@ -30,7 +32,7 @@ public class BouyancyComplex : MonoBehaviour
         floatersUnderwater = 0;
         for (int i = 0; i < floaters.Length; i++)
         {
-            float difference = floaters[i].position.y - waterHeight;
+            float difference = floaters[i].position.y - _vertexManager.SendWaterCast(floaters[i].transform).y;
             if (difference < 0)
             {
                 rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(difference), floaters[i].position, ForceMode.Force);
@@ -39,6 +41,9 @@ public class BouyancyComplex : MonoBehaviour
                 {
                     underwater = true; SwithState(underwater);
                 }
+            } else
+            {
+                floatersUnderwater -= 1;
             }
 
 
